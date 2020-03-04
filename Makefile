@@ -1,4 +1,4 @@
-obj-m += main.o
+obj-m += mymodule.o
 ccflags-y := -std=gnu11 -O3
 
 # Enable strict compiler warnings, excluding header files
