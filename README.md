@@ -5,11 +5,13 @@ Linux Kernel Module Practice
 - Linux 4.9.0
 
 ```
-# Install prerequisites
-sudo apt-get install make linux-headers-4.9.0-12-amd64
-
 # Build
+sudo apt-get install make linux-headers-4.9.0-12-amd64
 make
+
+# Load & unload the module, check `dmesg`
+sudo insmod mymodule.ko
+sudo rmmod mymodule
 
 # Clean
 make clean
