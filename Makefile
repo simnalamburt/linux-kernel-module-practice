@@ -1,8 +1,9 @@
 obj-m += mymodule.o
-ccflags-y := -std=gnu11 -O3
+mymodule-y += main.o
 
-# Enable strict compiler warnings, excluding header files
-ccflags-y += -Wextra -Wpedantic
+ccflags-y := -std=gnu11 -O3 -Wextra -Wpedantic
+
+# To disable warnings in header files
 LINUXINCLUDE := $(subst -I, -isystem, $(LINUXINCLUDE))
 
 all:
