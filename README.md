@@ -2,6 +2,7 @@ Linux Kernel Module Practice
 ========
 
 ### Requirements
+- x86_64 CPU
 - Linux 4.9.0
 
 ```
