@@ -1,5 +1,5 @@
 obj-m += mymodule.o
-mymodule-y += main.o impl.o
+mymodule-objs += main.o impl.o
 
 ccflags-y := -std=gnu11 -O3 -Wextra -Wpedantic
 
