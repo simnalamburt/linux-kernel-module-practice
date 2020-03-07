@@ -3,13 +3,13 @@
 //
 __attribute__((format(printf, 1, 2)))
 __attribute__((__cold__))
-int32_t printk(const char *fmt, ...);
+int printk(const char *fmt, ...);
 
 //
 // Implementation
 //
 
-int32_t init_impl(void) {
+int init_impl(void) {
   printk("\0016Hello, base C!\n");
   return 0;
 }
