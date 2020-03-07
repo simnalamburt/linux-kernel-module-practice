@@ -1,0 +1,33 @@
+# Disable optimizing stores which introduce data races
+--param=allow-store-data-races=0
+
+# target CPU
+-m64 -mno-mmx -mno-sse -mno-sse2 -mno-3dnow -mno-avx -mno-80387 -mno-fp-ret-in-387
+
+# options
+-fno-strict-aliasing
+-fno-common
+-fshort-wchar
+-fno-PIE
+-falign-jumps=1
+-falign-loops=1
+-funit-at-a-time
+-fno-asynchronous-unwind-tables
+-fno-delete-null-pointer-checks
+-fstack-protector-strong
+-fno-var-tracking-assignments
+-fno-strict-overflow
+-fno-merge-all-constants
+-fmerge-constants
+-fno-stack-check
+-fconserve-stack
+
+-mpreferred-stack-boundary=3
+-mskip-rax-setup
+-mtune=generic
+-mno-red-zone
+-mcmodel=kernel
+-maccumulate-outgoing-args
+-mindirect-branch=thunk-extern
+-mindirect-branch-register
+-mfentry

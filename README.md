@@ -2,12 +2,19 @@ Linux Kernel Module Practice
 ========
 
 ### Requirements
-- x86_64 CPU
+- [rustup](https://rustup.rs/)
 - Linux 4.9.0
+- x86_64 CPU
 
-```
-# Build
+### Instructions
+```bash
+# Install Rust nightly compiler and download Rust source codes
+rustup toolchain install nightly
+rustup +nightly component add rust-src
+# Install prerequisites
 sudo apt-get install make linux-headers-4.9.0-12-amd64
+
+# Build
 make
 
 # Load & unload the module, check `dmesg`
