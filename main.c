@@ -1,6 +1,10 @@
 #include <linux/module.h>
 #include "impl.h"
 
+MODULE_LICENSE("GPL v2");
+MODULE_AUTHOR("Hyeon Kim <simnalamburt@gmail.com>");
+MODULE_DESCRIPTION("PoC of Linux kernel module written in Rust");
+
 static int __init mymodule_init(void) {
   return init_impl();
 }

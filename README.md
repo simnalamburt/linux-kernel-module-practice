@@ -17,3 +17,13 @@ sudo rmmod mymodule
 # Clean
 make clean
 ```
+
+&nbsp;
+
+--------
+
+*linux-kernel-module-practice* is distributed under the terms of the [GNU
+General Public License v2.0] or any later version. See [COPYRIGHT] for details.
+
+[GNU General Public License v2.0]: LICENSE
+[COPYRIGHT]: COPYRIGHT
