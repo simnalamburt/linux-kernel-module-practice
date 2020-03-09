@@ -1,6 +1,9 @@
 Linux Kernel Module Practice
 ========
 
+![Screenshot of this project's output. It simply prints "Hello, Rust!" and "Bye,
+Rust!"](https://raw.githubusercontent.com/simnalamburt/i/master/linux-kernel-module-practice/screenshot.png)
+
 ### Requirements
 - [rustup](https://rustup.rs/)
 - Linux 4.9.0
