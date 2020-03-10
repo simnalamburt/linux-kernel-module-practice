@@ -1,4 +1,5 @@
 #![no_std]
+#![feature(core_intrinsics)]
 
 extern {
     #[cold]
@@ -20,11 +21,15 @@ pub extern fn exit_impl() {
     }
 }
 
-/// Infinite loop on panic
+/// Abort on panic
 ///
-/// TODO: Must find a better way to abort, like `BUG()`
+/// Implemented just like the [`BUG()`] macro.
+///
+/// [`BUG()`]: https://github.com/torvalds/linux/blob/69973b830859bc6529a7a0468ba0d80ee5117826/arch/x86/include/asm/bug.h#L30
 #[panic_handler]
 #[no_mangle]
 extern fn panic(_info: &core::panic::PanicInfo) -> ! {
-    loop { }
+    unsafe {
+        core::intrinsics::abort()
+    }
 }

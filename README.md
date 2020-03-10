@@ -7,7 +7,7 @@ Rust!"](https://raw.githubusercontent.com/simnalamburt/i/master/linux-kernel-mod
 ### Requirements
 - [rustup](https://rustup.rs/)
 - Linux 4.9.0
-- x86_64 CPU
+- AMD64 CPU
 
 ### Instructions
 ```bash
