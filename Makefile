@@ -22,9 +22,9 @@ clean:
 #
 # Rules for Rust codes
 #
-$(src)/rust/target/x86_64-linux-kernel/debug/liblinux_kernel_module.a: $(src)/rust/Cargo.toml $(wildcard $(src)/rust/src/*.rs)
+$(src)/rust/target/x86_64-linux-kernel/release/liblinux_kernel_module.a: $(src)/rust/Cargo.toml $(wildcard $(src)/rust/src/*.rs)
 	cd $(src)/rust &&\
-	  env -u MAKE -u MAKEFLAGS cargo +nightly build -Z build-std=core
+	  env -u MAKE -u MAKEFLAGS cargo +nightly build --release -Z build-std=core
 
-%.rust.o: rust/target/x86_64-linux-kernel/debug/lib%.a
+%.rust.o: rust/target/x86_64-linux-kernel/release/lib%.a
 	$(LD) -r -o $@ --whole-archive $<
