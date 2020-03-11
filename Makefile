@@ -2,8 +2,8 @@
 #   https://www.kernel.org/doc/Documentation/kbuild/modules.txt
 #   https://www.kernel.org/doc/Documentation/kbuild/makefiles.txt
 
-obj-m += mymodule.o
-mymodule-objs += main.o linux_kernel_module.rust.o
+obj-m := mymodule.o
+mymodule-objs := main.o linux_kernel_module.rust.o
 
 ccflags-y := -std=gnu11 -Wextra -Wpedantic
 
