@@ -18,7 +18,7 @@ rustup +nightly component add rust-src
 sudo apt-get install make linux-headers-4.9.0-12-amd64
 
 # Build
-make
+make -j
 
 # Load & unload the module, check `dmesg`
 sudo insmod mymodule.ko
